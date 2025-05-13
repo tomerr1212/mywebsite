@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סוכן ביטוח מקצועי | הגנה פיננסית מותאמת אישית</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#10b981'
+                    },
+                    fontFamily: {
+                        hebrew: ['Rubik', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Rubik', sans-serif;
+            direction: rtl;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-primary p-2 rounded-lg mr-3">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-primary">ביטוח PRO</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 space-x-reverse">
+                <a href="#services" class="text-gray-700 hover:text-primary transition-all">שירותים</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition-all">אודות</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-primary transition-all">לקוחות ממליצים</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-all">צור קשר</a>
+            </div>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="#services" class="block py-2 text-gray-700 hover:text-primary">שירותים</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-primary">אודות</a>
+            <a href="#testimonials" class="block py-2 text-gray-700 hover:text-primary">לקוחות ממליצים</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-primary">צור קשר</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">הגנה פיננסית מותאמת אישית עבורך</h1>
+                <p class="text-xl mb-8">סוכן ביטוח מוסמך עם למעלה מ-15 שנות ניסיון במתן פתרונות ביטוח מותאמים אישית למשפחות ולעסקים.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-all text-center">קבל הצעת מחיר</a>
+                    <a href="tel:+972501234567" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-primary transition-all text-center">
+                        <i class="fas fa-phone mr-2"></i> 050-123-4567
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Insurance agent helping client" class="rounded-lg shadow-xl floating max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <div class="bg-gray-100 py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IAI_logo.svg/1200px-IAI_logo.svg.png" alt="Insurance Association" class="h-12 opacity-70">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Migdal_logo.svg/1200px-Migdal_logo.svg.png" alt="Migdal Insurance" class="h-12 opacity-70">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Clal_Insurance_logo.svg/1200px-Clal_Insurance_logo.svg.png" alt="Clal Insurance" class="h-12 opacity-70">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Harel_Insurance_logo.svg/1200px-Harel_Insurance_logo.svg.png" alt="Harel Insurance" class="h-12 opacity-70">
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">השירותים שלנו</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">אנו מציעים מגוון רחב של פתרונות ביטוח מותאמים אישית לצרכים שלך</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="p-6">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-home text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח דירה</h3>
+                        <p class="text-gray-600 mb-4">הגנה מקיפה על הבית והרכוש שלך מפני נזקים, גניבות ואירועים בלתי צפויים.</p>
+                        <a href="#contact" class="text-primary font-semibold hover:underline">למידע נוסף <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="p-6">
+                        <div class="bg-secondary bg-opacity-10 p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-car text-secondary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח רכב</h3>
+                        <p class="text-gray-600 mb-4">כיסויים מותאמים אישית לרכב שלך, כולל ביטוח חובה, מקיף וצד ג' במחירים תחרותיים.</p>
+                        <a href="#contact" class="text-secondary font-semibold hover:underline">למידע נוסף <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="p-6">
+                        <div class="bg-accent bg-opacity-10 p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-heart text-accent text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח חיים</h3>
+                        <p class="text-gray-600 mb-4">הגנה פיננסית למשפחתך במקרה של אירוע בלתי צפוי, עם פוליסות גמישות ומותאמות.</p>
+                        <a href="#contact" class="text-accent font-semibold hover:underline">למידע נוסף <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="p-6">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-briefcase text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח עסקי</h3>
+                        <p class="text-gray-600 mb-4">פתרונות ביטוח מקיפים לעסקים מכל הגדלים, כולל אחריות מקצועית וביטוח ציוד.</p>
+                        <a href="#contact" class="text-primary font-semibold hover:underline">למידע נוסף <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="p-6">
+                        <div class="bg-secondary bg-opacity-10 p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-plane text-secondary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח נסיעות</h3>
+                        <p class="text-gray-600 mb-4">כיסוי מקיף לנסיעות לחו"ל, כולל ביטוח רפואי, אובדן מטען וביטול נסיעה.</p>
+                        <a href="#contact" class="text-secondary font-semibold hover:underline">למידע נוסף <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="p-6">
+                        <div class="bg-accent bg-opacity-10 p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-umbrella text-accent text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח סיעודי</h3>
+                        <p class="text-gray-600 mb-4">פתרונות פיננסיים למצב סיעודי, עם גמישות בבחירת תקופת ההמתנה וגובה הפיצוי.</p>
+                        <a href="#contact" class="text-accent font-semibold hover:underline">למידע נוסף <i class="fas fa-arrow-left ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1582211595218-9358b9d7a1b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Insurance agent" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">אודותיי</h2>
+                    <p class="text-gray-600 mb-4 text-lg">שמי דניאל לוי ואני סוכן ביטוח מוסמך עם למעלה מ-15 שנות ניסיון בענף הביטוח. במהלך השנים עזרתי למאות משפחות ועסקים למצוא את פתרונות הביטוח המתאימים ביותר לצרכים שלהם.</p>
+                    <p class="text-gray-600 mb-6 text-lg">אני מייצג את חברות הביטוח המובילות בישראל ומתמחה במציאת הפוליסות המשתלמות ביותר עם הכיסויים הרחבים ביותר עבור הלקוחות שלי.</p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-medal text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">המומחיות שלי</h4>
+                                <p class="text-gray-600">תואר ראשון בכלכלה, הסמכת סוכן ביטוח מטעם המפקח על הביטוח, וחבר באגודת סוכני הביטוח בישראל.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-secondary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-hand-holding-heart text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">הגישה שלי</h4>
+                                <p class="text-gray-600">אני מאמין בשירות אישי, שקיפות מלאה ויחסי אמון ארוכי טווח עם הלקוחות שלי. כל פוליסה נבחנת בקפידה כדי להתאים בדיוק לצרכים שלך.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">15+</div>
+                    <div class="text-lg">שנות ניסיון</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">2,500+</div>
+                    <div class="text-lg">לקוחות מרוצים</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">12</div>
+                    <div class="text-lg">חברות ביטוח</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-lg">שירות ותמיכה</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">מה הלקוחות אומרים</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">המלצות מלקוחות מרוצים שזכו לשירות מקצועי ואדיב</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"דניאל עזר לנו למצוא ביטוח דירה במחיר מצוין עם כיסוי רחב יותר ממה שהיה לנו קודם. השירות המקצועי והסבלנות שלו ראויים לכל שבח."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Cohen" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">שרה כהן</h4>
+                            <p class="text-gray-500">רמת גן</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"אחרי תאונת דרכים מורכבת, דניאל טיפל בכל התביעה מול חברת הביטוח בצורה מקצועית. קיבלנו פיצוי מלא מבלי שנצטרך להתעסק עם הבירוקרטיה."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Levi" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">דוד לוי</h4>
+                            <p class="text-gray-500">חיפה</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"כבעל עסק קטן, מצאתי אצל דניאל פתרונות ביטוח מותאמים שחסכו לי אלפי שקלים בשנה. הוא באמת מבין את הצרכים של עסקים קטנים."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Moshe Cohen" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">משה כהן</h4>
+                            <p class="text-gray-500">ירושלים</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">מוכן להגן על העתיד שלך?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">השאירו פרטים ואחזור אליכם בהקדם כדי להתאים את פוליסת הביטוח המושלמת עבורכם</p>
+            <a href="#contact" class="bg-white text-primary font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all inline-block">קבל הצעת מחיר ללא התחייבות</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">צור קשר</h2>
+                    <p class="text-gray-600 mb-8 text-lg">אשמח לעזור לך למצוא את פתרון הביטוח המתאים ביותר. השאר פרטים ואחזור אליך בהקדם או התקשר אלי ישירות.</p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">טלפון</h4>
+                                <a href="tel:+972501234567" class="text-gray-600 hover:text-primary">050-123-4567</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">אימייל</h4>
+                                <a href="mailto:contact@bitachonpro.co.il" class="text-gray-600 hover:text-primary">contact@bitachonpro.co.il</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">כתובת</h4>
+                                <p class="text-gray-600">רחוב הביטוח 15, תל אביב</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-gray-800 mb-4">שעות פעילות</h4>
+                        <div class="flex justify-between border-b border-gray-200 py-2">
+                            <span class="text-gray-600">א'-ה'</span>
+                            <span class="font-medium text-gray-800">08:30 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="text-gray-600">ו' וערבי חג</span>
+                            <span class="font-medium text-gray-800">08:30 - 13:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">שלחו הודעה</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">שם מלא</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">טלפון</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">אימייל</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="service" class="block text-gray-700 font-medium mb-2">סוג השירות המבוקש</label>
+                                <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="">בחר שירות</option>
+                                    <option value="home">ביטוח דירה</option>
+                                    <option value="car">ביטוח רכב</option>
+                                    <option value="life">ביטוח חיים</option>
+                                    <option value="business">ביטוח עסקי</option>
+                                    <option value="travel">ביטוח נסיעות</option>
+                                    <option value="other">אחר</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">הודעה</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-blue-800 transition-all">שלח הודעה</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">שאלות נפוצות</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">התשובות לשאלות שהכי נשאלות על ביטוחים</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-btn flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-semibold text-gray-800">כמה זמן לוקח לקבל הצעת ביטוח?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-600 hidden">
+                        <p>ברוב המקרים אוכל לספק לך הצעת ביטוח ראשונית בתוך 24 שעות מרגע הפנייה. עבור פוליסות מורכבות יותר כמו ביטוח עסקי או ביטוח חיים, התהליך עשוי לארוך עד 3 ימי עבודה.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-btn flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-semibold text-gray-800">האם אתם מייצגים את כל חברות הביטוח?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-600 hidden">
+                        <p>אני מייצג את 12 חברות הביטוח המובילות בישראל, כולל כל החברות הגדולות. זה מאפשר לי להשוות עבורך בין מגוון רחב של אפשרויות ולמצוא את הפוליסה המתאימה ביותר במחיר התחרותי ביותר.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-btn flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-semibold text-gray-800">האם יש עלות לקבלת הצעת מחיר?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-600 hidden">
+                        <p>לא, השירות של קבלת הצעת מחיר והתייעצות ראשונית הוא ללא עלות וללא כל התחייבות מצדך. אני גובה עמלה רק אם תחליט לרכוש פוליסה דרך השירות שלי.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-btn flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-semibold text-gray-800">מה היתרון ברכישת ביטוח דרך סוכן?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-600 hidden">
+                        <p>סוכן ביטוח מורשה מספק לך מספר יתרונות משמעותיים: ייעוץ מקצועי ועצמאי, השוואה בין מספר חברות ביטוח, סיוע במילוי תביעות, עדכון שוטף של הפוליסה לפי צרכיך המשתנים, וייצוג מול חברת הביטוח במקרה של תביעה.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="mb-6">
+                    <button class="faq-btn flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-xl font-semibold text-gray-800">האם אפשר להעביר אליכם פוליסה קיימת מחברת ביטוח אחרת?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-600 hidden">
+                        <p>בהחלט. אני יכול לקחת פיקוד על פוליסה קיימת שלך, לבדוק אם היא עדיין מתאימה לצרכים שלך, ולעזור לך לנהל אותה מול חברת הביטוח. אם נמצא שהפוליסה לא מותאמת או יקרה מדי, אוכל להציע לך אלטרנטיבות טובות יותר.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary p-2 rounded-lg mr-3">
+                            <i class="fas fa-shield-alt text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">ביטוח PRO</span>
+                    </div>
+                    <p class="text-gray-400">שירותי ביטוח מקצועיים ומותאמים אישית למשפחות ועסקים בישראל.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">שירותים</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">ביטוח דירה</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ביטוח רכב</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ביטוח חיים</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ביטוח עסקי</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ביטוח נסיעות</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">קישורים</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white">שירותים</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">אודות</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">לקוחות ממליצים</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">צור קשר</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">בלוג</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">יצירת קשר</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <a href="tel:+972501234567" class="text-gray-400 hover:text-white">050-123-4567</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <a href="mailto:contact@bitachonpro.co.il" class="text-gray-400 hover:text-white">contact@bitachonpro.co.il</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">רחוב הביטוח 15, תל אביב</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-4 flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 ביטוח PRO. כל הזכויות שמורות.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg max-w-md w-full mx-4">
+            <div class="text-center">
+                <div class="bg-green-100 p-4 rounded-full inline-block mb-4">
+                    <i class="fas fa-check-circle text-green-500 text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">תודה שפנית אלינו!</h3>
+                <p class="text-gray-600 mb-6">ההודעה שלך התקבלה בהצלחה. ניצור איתך קשר בהקדם האפשרי.</p>
+                <button id="close-modal" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-all">סגור</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        });
+
+        const result = await response.json();
+        alert(result.message);
+        });
+        
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+        });
+        
+        // Close modal when clicking outside
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=tomerMaa/test-space" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
